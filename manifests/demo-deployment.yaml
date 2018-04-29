@@ -1,0 +1,61 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: demo
+  namespace: ledhouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      name: demo
+      labels:
+        app: demo
+    spec:
+      volumes:
+        - name: service-account
+          secret:
+           secretName: demo-to-ledhouse-publisher
+      containers:
+        - name: demo
+          image: gcr.io/n3wscott-ledhouse-demo/demo-image:latest
+          volumeMounts:
+            - name: service-account
+              mountPath: /var/secrets/service-account
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /var/secrets/service-account/privateKeyData
+            - name: GOOGLE_CLOUD_PROJECT
+              valueFrom:
+                secretKeyRef:
+                  name: demo-to-ledhouse-publisher
+                  key: projectId
+            - name: PUBSUB_TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: demo-to-ledhouse-publisher
+                  key: topicId
+            - name: TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: 1a-red
+                  key: token
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: ledhouse
+  labels:
+    app: demo
+spec:
+  selector:
+    app: demo
+  ports:
+  - port: 80
+    targetPort: 8080
+  type: LoadBalancer
