@@ -20,7 +20,7 @@ spec:
            secretName: proxy-to-local-publisher
       containers:
         - name: proxy
-          image: us.gcr.io/n3wscott-ledhouse-demo/k8s-broker-proxy:1589f8d
+          image: us.gcr.io/n3wscott-ledhouse-demo/k8s-broker-proxy:808fe60
           volumeMounts:
             - name: service-account
               mountPath: /var/secrets/service-account
