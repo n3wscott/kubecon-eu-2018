@@ -222,7 +222,7 @@ svcat bind 1a-red --name demo-light
 
 ## Complex Demo
 
-(Twitter doc.)[Twitter.md]
+[Twitter doc.](Twitter.md)
 
 ## Useful,
 
