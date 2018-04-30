@@ -1,6 +1,6 @@
 # KubeCon EU 2018
 
-These are my notes for demo prep. 
+These are my notes for Twitter demo prep. 
 
 
 ### After Setup
@@ -9,21 +9,12 @@ These are my notes for demo prep.
 
 ```
 gcloud container clusters get-credentials n3wscott-ledhouse-demo-cluster --zone us-central1-a --project n3wscott-ledhouse-demo
-gcloud config set project n3wscott-ledhouse-demo
 ```
 
 or
 
 ```
 gcloud container clusters get-credentials n3wscott-ledhouse-complex-cluster --zone us-central1-a --project n3wscott-ledhouse-complex
-gcloud config set project n3wscott-ledhouse-complex
-```
-
-rerun
-
-```
-GCP_PROJECT_ID=$(gcloud config get-value project)
-GCP_PROJECT_NUMBER=$(gcloud projects describe $GCP_PROJECT_ID --format='value(projectNumber)')
 ```
 
 ## Setup
@@ -33,8 +24,8 @@ GCP_PROJECT_NUMBER=$(gcloud projects describe $GCP_PROJECT_ID --format='value(pr
 create gke cluster in ui, then:
 
 ```
-gcloud container clusters get-credentials n3wscott-ledhouse-demo-cluster --zone us-central1-a --project n3wscott-ledhouse-demo
-gcloud config set project n3wscott-ledhouse-demo
+gcloud container clusters get-credentials n3wscott-ledhouse-complex-cluster --zone us-central1-a --project n3wscott-ledhouse-complex
+gcloud config set project n3wscott-ledhouse-complex
 gcloud auth application-default login
 kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud config get-value account)
 sc install
@@ -104,24 +95,6 @@ kubectl get secret --namespace ledhouse demo-to-ledhouse-publisher -oyaml
 svcat describe bindings --namespace ledhouse demo-to-ledhouse-subscriber
 kubectl get secret --namespace ledhouse demo-to-ledhouse-subscriber -oyaml
 
-```
-
-### Upload the demo image
-
-once: `gcloud auth configure-docker`
-
-```
-pushd demo
-docker build -t demo-image .
-docker tag demo-image gcr.io/n3wscott-ledhouse-demo/demo-image:latest
-docker push gcr.io/n3wscott-ledhouse-demo/demo-image:latest
-popd
-```
-
-### Deploy the demo
-
-```
-kubectl create -f ./demo/manifests/demo-deployment.yaml
 ```
 
 ### Provision pubsub for proxy <--> local
@@ -197,7 +170,7 @@ svcat bind local-to-proxy-pubsub --name local-to-proxy-subscriber \
 ### Deploy the proxy
 
 ```
-kubectl create -f ./demo/manifests/proxy-deployment.yaml
+kubectl create -f ./twitter/manifests/proxy-deployment.yaml
 ```
 
 ### Connect local to proxy
@@ -210,19 +183,39 @@ kubectl get secret --namespace ledhouse proxy-to-local-subscriber -ojson
 ### Register service catalog to the proxy
 
 ```
-kubectl create -f ./demo/manifests/proxy-broker.yaml
+kubectl create -f ./proxy-broker.yaml
 ```
 
-### Provision and bind to a light for the demo
+### Provision and bind the lights
 
 ```
-svcat provision 1a-red --class 1A --plan Red
-svcat bind 1a-red --name demo-light
+kubectl apply -f ./manifests/demo-lights.yaml
+kubectl apply -f ./manifests/demo-light-bindings.yaml
 ```
 
-## Complex Demo
+### Make the twitter secret
 
-(Twitter doc.)[Twitter.md]
+```
+kubectl create secret generic twitter \
+    --from-literal=consumerKey=XXX \
+    --from-literal=consumerSecret=YYY \
+    --from-literal=token=ZZZ \
+    --from-literal=tokenSecret=AAA
+```
+
+### Upload the demo image
+
+once: `gcloud auth configure-docker`
+
+```
+make upload
+```
+
+### deploy the demo app
+
+```
+kubectl create -f ./manifests/demo-deployment.yaml
+```
 
 ## Useful,
 

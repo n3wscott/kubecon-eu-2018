@@ -1,0 +1,269 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1a-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1A
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1a-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1A
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1a-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1A
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1b-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1B
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1b-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1B
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1b-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1B
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1c-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1C
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1c-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1C
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 1c-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 1C
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2a-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2A
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2a-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2A
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2a-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2A
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2b-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2B
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2b-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2B
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2b-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2B
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2c-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2C
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2c-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2C
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 2c-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 2C
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3a-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3A
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3a-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3A
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3a-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3A
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3b-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3B
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3b-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3B
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3b-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3B
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3c-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3C
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3c-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3C
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 3c-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 3C
+  clusterServicePlanExternalName: Blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 4a-red
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 4A
+  clusterServicePlanExternalName: Red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 4a-green
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 4A
+  clusterServicePlanExternalName: Green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: 4a-blue
+  namespace: ledhouse
+spec:
+  clusterServiceClassExternalName: 4A
+  clusterServicePlanExternalName: Blue

@@ -1,0 +1,270 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1a-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1a-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1a-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1a-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1a-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1a-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1b-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1b-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1b-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1b-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1b-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1b-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1c-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1c-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1c-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1c-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 1c-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 1c-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2a-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2a-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2a-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2a-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2a-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2a-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2b-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2b-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2b-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2b-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2b-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2b-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2c-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2c-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2c-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2c-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 2c-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 2c-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3a-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3a-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3a-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3a-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3a-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3a-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3b-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3b-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3b-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3b-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3b-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3b-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3c-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3c-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3c-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3c-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 3c-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 3c-blue
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 4a-red
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 4a-red
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 4a-green
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 4a-green
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  name: 4a-blue
+  namespace: ledhouse
+spec:
+  instanceRef:
+    name: 4a-blue
+---

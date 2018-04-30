@@ -1,0 +1,32 @@
+#!/bin/bash
+
+svcat deprovision 1a-blue
+svcat deprovision 1a-green
+svcat deprovision 1a-red
+svcat deprovision 1b-blue
+svcat deprovision 1b-green
+svcat deprovision 1b-red
+svcat deprovision 1c-blue
+svcat deprovision 1c-green
+svcat deprovision 1c-red
+svcat deprovision 2a-blue
+svcat deprovision 2a-green
+svcat deprovision 2a-red
+svcat deprovision 2b-blue
+svcat deprovision 2b-green
+svcat deprovision 2b-red
+svcat deprovision 2c-blue
+svcat deprovision 2c-green
+svcat deprovision 2c-red
+svcat deprovision 3a-blue
+svcat deprovision 3a-green
+svcat deprovision 3a-red
+svcat deprovision 3b-blue
+svcat deprovision 3b-green
+svcat deprovision 3b-red
+svcat deprovision 3c-blue
+svcat deprovision 3c-green
+svcat deprovision 3c-red
+svcat deprovision 4a-blue
+svcat deprovision 4a-green
+svcat deprovision 4a-red

@@ -3,4 +3,4 @@ kind: ClusterServiceBroker
 metadata:
   name: broker-proxy
 spec:
-  url: <URL OF PROXY>:3000
+  url: http://<URL OF PROXY>:3000

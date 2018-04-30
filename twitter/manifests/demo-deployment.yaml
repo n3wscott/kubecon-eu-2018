@@ -1,0 +1,211 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: demo
+  namespace: ledhouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      name: demo
+      labels:
+        app: demo
+    spec:
+      volumes:
+        - name: service-account
+          secret:
+           secretName: demo-to-ledhouse-publisher
+      containers:
+        - name: demo
+          image: us.gcr.io/n3wscott-ledhouse-complex/twitter-demo:4f25c70
+          volumeMounts:
+            - name: service-account
+              mountPath: /var/secrets/service-account
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /var/secrets/service-account/privateKeyData
+            - name: GOOGLE_CLOUD_PROJECT
+              valueFrom:
+                secretKeyRef:
+                  name: demo-to-ledhouse-publisher
+                  key: projectId
+            - name: PUBSUB_TOPIC
+              valueFrom:
+                secretKeyRef:
+                  name: demo-to-ledhouse-publisher
+                  key: topicId
+            - name: TWITTER_CONSUMER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: twitter
+                  key: consumerKey
+            - name: TWITTER_CONSUMER_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: twitter
+                  key: consumerSecret
+            - name: TWITTER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: twitter
+                  key: token
+            - name: TWITTER_TOKEN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: twitter
+                  key: tokenSecret
+            - name: TOKEN_1A_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 1a-red
+                  key: token
+            - name: TOKEN_1A_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 1a-green
+                  key: token
+            - name: TOKEN_1A_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 1a-blue
+                  key: token
+            - name: TOKEN_1B_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 1b-red
+                  key: token
+            - name: TOKEN_1B_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 1b-green
+                  key: token
+            - name: TOKEN_1B_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 1b-blue
+                  key: token
+            - name: TOKEN_1C_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 1c-red
+                  key: token
+            - name: TOKEN_1C_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 1c-green
+                  key: token
+            - name: TOKEN_1C_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 1c-blue
+                  key: token
+            - name: TOKEN_2A_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 2a-red
+                  key: token
+            - name: TOKEN_2A_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 2a-green
+                  key: token
+            - name: TOKEN_2A_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 2a-blue
+                  key: token
+            - name: TOKEN_2B_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 2b-red
+                  key: token
+            - name: TOKEN_2B_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 2b-green
+                  key: token
+            - name: TOKEN_2B_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 2b-blue
+                  key: token
+            - name: TOKEN_2C_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 2c-red
+                  key: token
+            - name: TOKEN_2C_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 2c-green
+                  key: token
+            - name: TOKEN_2C_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 2c-blue
+                  key: token
+            - name: TOKEN_3A_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 3a-red
+                  key: token
+            - name: TOKEN_3A_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 3a-green
+                  key: token
+            - name: TOKEN_3A_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 3a-blue
+                  key: token
+            - name: TOKEN_3B_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 3b-red
+                  key: token
+            - name: TOKEN_3B_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 3b-green
+                  key: token
+            - name: TOKEN_3B_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 3b-blue
+                  key: token
+            - name: TOKEN_3C_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 3c-red
+                  key: token
+            - name: TOKEN_3C_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 3c-green
+                  key: token
+            - name: TOKEN_3C_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 3c-blue
+                  key: token
+            - name: TOKEN_4A_RED
+              valueFrom:
+                secretKeyRef:
+                  name: 4a-red
+                  key: token
+            - name: TOKEN_4A_GREEN
+              valueFrom:
+                secretKeyRef:
+                  name: 4a-green
+                  key: token
+            - name: TOKEN_4A_BLUE
+              valueFrom:
+                secretKeyRef:
+                  name: 4a-blue
+                  key: token
+          ports:
+            - containerPort: 8080
